@@ -8,6 +8,30 @@
 
     --font-sans: "josefin Sans", sans-serif;
     --font-alata: "Alata";
+
+    --tracking-widest: 0.3em;
+}
+
+@layer base {
+    h5 {
+        @apply absolute px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black;
+    }
+}
+
+.item-container {
+    @apply flex flex-col justify-between w-full space-y-6 text-2xl md:space-y-0 uppercase md:flex-row md:space-x-8 text-white;
+}
+
+.item {
+    @apply relative overflow-hidden md:w-1/4;
+}
+
+.btn {
+    @apply border-2 border-black px-10 py-2 my-0 font-bold font-alata uppercase md:block hover:text-white hover:bg-black tracking-widest
+}
+
+.item-gradient {
+    @apply absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70;
 }
 
 .hero {
@@ -18,8 +42,8 @@
 
 @media (max-width: 576px) {
     .hero {
-    background-image: url("./assets/images/mobile/image-hero.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-}
+        background-image: url("./assets/images/mobile/image-hero.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
